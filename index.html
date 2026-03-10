@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Exploring Places - Voltaire Pascual</title>
+<link type="text/css" rel="stylesheet" href="css/index-stylesheet.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+/* Optional: smooth fade for images */
+.header-img.left-img, .about-profile img {
+  transition: opacity 1s ease-in-out;
+}
+</style>
+</head>
+
+<body>
+
+<header class="main-header">
+
+<img src="images/dubai.png" class="header-img left-img" alt="Left Header Image">
+
+<div class="header-text">
+<h1>Exploring Places with Voltaire Pascual</h1>
+</div>
+
+<img src="images/banawe.png" class="header-img right-img" alt="Right Header Image">
+</header>
+
+<nav>
+<ul>
+<li class="selected"><a href="index.html">Home</a></li>
+<li><a href="philippines.html">Philippines</a></li>
+<li><a href="uae.html">United Arab Emirates</a></li>
+</ul>
+</nav>
+
+<main>
+
+<!-- About Me Section -->
+<section class="about-section">
+<h2>About Me</h2>
+
+<div class="about-container">
+
+<div class="about-profile">
+<img src="images/volt2.png" alt="Voltaire Pascual">
+</div>
+
+<div class="about-text">
+<p>💼<strong>Career:</strong> Voltaire Jomuad Pascual is a customer operations and logistics professional with expertise in import and export operations, process improvement, and risk and control. He currently serves as a B2B E-Commerce Portal Analyst, supporting organizations in their digital transformation and digital commerce platforms.</p>
+<p>🎓<strong>Education:</strong> He holds a Bachelor’s degree in Customs Administration, a Certificate in Health Care Services, and is currently pursuing a Diploma in Computer Science at UP Open University.</p>
+<p>🌍<strong>Global Experience:</strong> With more than 20 years of international experience in the United Arab Emirates, he has worked with professionals from diverse cultures and nationalities.</p>
+<p>🌱<strong>Personal Mission:</strong> Passionate about continuous learning, he strives to use knowledge and experience to create meaningful impact for himself, his family, and his community.</p>
+</div>
+
+</div>
+</section>
+
+<!-- Hobbies & Interests Section -->
+<section class="hobbies-section">
+
+<h2>Hobbies & Interests</h2>
+
+<div class="hobby-container">
+
+  <!-- Sports -->
+  <div class="hobby-item">
+    <div class="hobby-images">
+		<img src="hobby-images/sports.png" alt="Sports">
+		<img src="hobby-images/run2.png" alt="Sports">
+		<img src="hobby-images/medal1.png" alt="Sports">
+		<img src="hobby-images/tri3.png" alt="Sports">
+    </div>
+    <div class="hobby-text">
+      <h3>Sports</h3>
+      <p>I enjoy staying active with my family through running, biking, and swimming, and we take every opportunity to challenge ourselves with these activities. Participating together has not only been a source of fun and bonding but has also strengthened our discipline, resilience, and goal-oriented mindset, teaching us the value of persistence and teamwork.</p>
+    </div>
+  </div>
+
+  <!-- Traveling -->
+  <div class="hobby-item">
+    <div class="hobby-images">
+		<img src="hobby-images/family-canada.png" alt="Traveling">
+		<img src="hobby-images/bohol1.png" alt="Traveling">
+		<img src="hobby-images/volt_cebu.png" alt="Traveling">
+		<img src="hobby-images/mountain.png" alt="Traveling">
+    </div>
+    <div class="hobby-text">
+      <h3>Traveling</h3>
+      <p>I love traveling with my family and discovering new cultures, traditions, and cuisines. Each trip strengthens our bond while giving me a deeper appreciation for diversity and global perspectives.</p>
+    </div>
+  </div>
+
+</div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact">
+<h2>Contact</h2>
+
+<div class="contact-grid">
+
+<p><i class="fas fa-envelope"></i> 
+<a href="mailto:pascualvolt@gmail.com">pascualvolt@gmail.com</a></p>
+
+<p><i class="fab fa-linkedin"></i> 
+<a href="https://www.linkedin.com/in/voltaire-pascual-3639172/" target="_blank">LinkedIn</a></p>
+
+<p><i class="fab fa-facebook"></i> 
+<a href="https://www.facebook.com/volt.pascual/" target="_blank">Facebook</a></p>
+
+<p><i class="fab fa-instagram"></i> 
+<a href="https://www.instagram.com/volt.pascual/" target="_blank">Instagram</a></p>
+
+</div>
+
+</section>
+
+<!-- Fun Fact -->
+<section class="funfact">
+<h2>Fun Fact</h2>
+<button onclick="showFact()">Click for a Fun Fact</button>
+<p id="fact"></p>
+</section>
+
+<footer>
+<p>© 2026 Voltaire Pascual</p>
+</footer>
+
+<script>
+// Wait until the page DOM is fully loaded
+document.addEventListener("DOMContentLoaded", function() {
+
+  // Fun Fact button
+  function showFact() {
+    document.getElementById("fact").innerHTML =
+    "I finished my 1st marathon when I was 42 years old!";
+  }
+  window.showFact = showFact;
+
+
+  // --- Image Slideshows ---
+
+  // Header left images
+  const headerLeftImages = [
+    "images/dubai.png",
+    "images/vancouver.png",
+    "images/cebu.png",
+    "images/boracay.png"
+  ];
+  let leftIndex = 0;
+  
+    // Header right images
+  const headerRightImages = [
+    "images/banawe.png",
+    "images/burj-khalifa1.png",
+    "images/grand-mosque.png",
+    "images/desert-safari.png"
+  ];
+  let rightIndex = 0;
+
+  // Profile images
+  const profileImages = [
+    "images/volt1.png",
+    "images/volt2.png",
+    "images/volt-shell1.png",
+    "images/casual-volt.png"
+  ];
+  let profileIndex = 0;
+
+  function changeImages() {
+
+    const leftImg = document.querySelector(".header-img.left-img");
+    const rightImg = document.querySelector(".header-img.right-img");
+    const profileImg = document.querySelector(".about-profile img");
+
+    if (!leftImg || !rightImg || !profileImg) return;
+
+    // Fade out
+    leftImg.style.opacity = 0;
+    rightImg.style.opacity = 0;
+    profileImg.style.opacity = 0;
+
+    setTimeout(() => {
+
+      leftIndex = (leftIndex + 1) % headerLeftImages.length;
+      rightIndex = (rightIndex + 1) % headerRightImages.length;
+      profileIndex = (profileIndex + 1) % profileImages.length;
+
+      leftImg.src = headerLeftImages[leftIndex];
+      rightImg.src = headerRightImages[rightIndex];
+      profileImg.src = profileImages[profileIndex];
+
+      // Fade in
+      leftImg.style.opacity = 1;
+      rightImg.style.opacity = 1;
+      profileImg.style.opacity = 1;
+
+    }, 500);
+
+  }
+
+  // Change images every 5 seconds
+  setInterval(changeImages, 5000);
+
+});
+</script>
+
+</body>
+</html>
