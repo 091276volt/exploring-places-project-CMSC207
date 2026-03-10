@@ -1,0 +1,280 @@
+/* Page Background */
+html {
+    background: radial-gradient(
+        circle,
+        skyblue,
+        skyblue 50%,
+        lightcyan 50%,
+        skyblue
+    );
+    background-size: 8px 8px;
+}
+
+/* Main Body */
+body {
+    background-color: #E6E6CC;
+    border: 4px solid gray;
+    border-radius: 16px;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    margin: auto;
+    max-width: 1024px;
+    min-width: 256px;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* Header Layout With Images */
+.main-header {
+    display: flex;
+    align-items: center;        /* vertically center images and text */
+    justify-content: space-between;
+    padding: 0 15px;            /* horizontal spacing */
+    border-radius: 10px;
+    background-color: #ADD8E6;  /* header background */
+    height: 120px;               /* same as image height */
+    box-sizing: border-box;      /* include padding in height */
+}
+
+.header-text {
+    flex-grow: 1;               /* take remaining space between images */
+    display: flex;              
+    align-items: center;        /* vertical center */
+    justify-content: center;    /* horizontal center */
+    text-align: center;
+    padding: 0 10px;            /* optional padding */
+}
+
+.header-img {
+    width: 140px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Headings */
+h1 {
+    margin: 0;
+    padding: 10px;
+    background: linear-gradient(90deg, #0077B6, #00B4D8);
+    color: white;
+    border-radius: 8px;
+}
+
+h2 {
+    background: linear-gradient(90deg, #00B4D8, #48CAE4);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-top: 0;
+}
+
+/* Navigation Bar */
+nav ul {
+    list-style-type: none;
+    background-color: #B577B5;
+    border: 4px solid #111111;
+    border-radius: 10px;
+    font-weight: bold;
+    padding: 16px;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    border-right: 2px solid #111111;
+    padding: 8px 12px;
+}
+
+nav ul li:last-child {
+    border-right: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #111111;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+nav li.selected {
+    color: #606060;
+}
+
+/* Main Layout */
+main {
+    display: block; /* Stack sections vertically */
+    margin-top: 20px;
+}
+
+/* Sections */
+section {
+    background: linear-gradient(135deg, #E0F7FA, #E1F5FE);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+}
+
+/* About Section Layout */
+.about-container {
+    display: flex;          /* Makes image and text side by side */
+    align-items: center;    /* Vertically align them */
+    gap: 20px;              /* Space between image and text */
+    margin-bottom: 20px;
+}
+
+.about-profile img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.about-text {
+    flex: 1;               /* Allows text to take remaining space */
+    font-size: 16px;
+}
+
+/* About Images Gallery */
+.about-image {
+    display: flex; /* Images in a row */
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.about-image img {
+    width: 220px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+}
+
+.about-image img:hover {
+    transform: scale(1.05);
+}
+
+/* Hobbies Section */
+.hobby-container {
+    display: block; /* Stack each hobby vertically */
+}
+
+.hobby-item {
+    display: block; /* Stack images above text */
+    margin-bottom: 30px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+.hobby-images {
+    display: flex; /* Images in a row inside each hobby */
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.hobby-images img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.hobby-title {
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Contact Grid Layout */
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr; /* 2 columns */
+    gap:15px;
+    margin-top:10px;
+}
+
+/* Contact Boxes */
+.contact-grid p{
+    background:#f5f5f5;
+    padding:12px;
+    border-radius:8px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:16px;
+}
+
+/* Icons */
+.contact-grid i{
+    font-size:20px;
+    color:#444;
+}
+
+/* Contact Links */
+.contact-grid a{
+    text-decoration: none;
+    color: #000;
+    padding: 4px 6px;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+/* Hover Highlight Effect */
+.contact-grid a:hover{
+    background-color: #ADD8E6;  /* light blue highlight */
+    color: black;
+}
+
+/* Table Styling */
+table {
+    font-size: 90%;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #FCAB68;
+}
+
+td {
+    background-color: #BA99C0;
+}
+
+/* Top Tip Box */
+p.top-tip {
+    border: 4px solid #00AFEB;
+    border-radius: 10px;
+    padding: 16px;
+    background-color: #C5EBFB;
+}
+
+p.top-tip::before {
+    content: "TOP TIP: ";
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 2px solid gray;
+    font-size: 14px;
+}
