@@ -23,7 +23,7 @@ This project is a personal website created to showcase selected travel destinati
 - Font Awesome for icons
 
 ## Live Demo Link
-https://091276volt.github.io/exploring-places/
+[https://091276volt.github.io/exploring-places/](https://091276volt.github.io/exploring-places-project-CMSC207/)
 
 ## Author
 Voltaire Pascual
